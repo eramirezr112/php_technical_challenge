@@ -27,5 +27,46 @@
       })
     })();
   </script>
+  <script>
+    
+    const listElements = document.getElementsByClassName('js-date-format');
+    const elementsInitValues = Object.entries(listElements).map((element) => {
+      return element[1].innerHTML;
+    });
+
+    elementsInitValues.forEach((eValue, pos) => {
+      const startTime = new Date(eValue);
+            
+      let element = listElements[pos];
+      let seconds = parseInt(element.innerHTML);
+
+      let formatText = "";
+      setInterval(function(){
+          const endTime = new Date();
+          let timeDiff = endTime - startTime; //in ms
+          timeDiff /= 1000;
+
+          // get seconds
+          let secondsT = Math.round(timeDiff);   
+          // remove seconds from the date
+          timeDiff = Math.floor(timeDiff / 60);    
+
+          // get minutes
+          let minutesT = Math.round(timeDiff % 60);   
+          // remove minutes from the date
+          timeDiff = Math.floor(timeDiff / 60);      
+          
+          // get hours
+          let hoursT = Math.round(timeDiff % 24);
+          formatText = `${secondsT} second ago <br /> Started ${minutesT} minutes ago <br /> Started ${hoursT} hours ago <br /> Started ${eValue} <br /><br />`;
+
+          // Update the contents of the element
+          element.innerHTML = formatText;
+      },1000);      
+
+    });
+    
+    
+  </script>
 </body>
 </html>

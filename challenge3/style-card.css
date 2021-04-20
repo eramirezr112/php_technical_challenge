@@ -1,0 +1,67 @@
+.card-container {
+  width: 324px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  margin: 5px;
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 14px;
+  align-items: center;
+}
+
+.header-container > div {
+  margin: 10px;
+  width: 100%;
+}
+
+.movie-title {
+  font-weight: 500;
+}
+
+.movie-time {
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.movie-card {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.check-button {
+  position: absolute;
+  bottom: 0;
+  right: 65px;
+  width: 200px;
+  height: 35px;
+  text-align: center;
+  line-height: 34px;
+  margin: 20px auto;
+  background-color: #a5a5a5;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  font-family: "Roboto";
+  text-decoration: none;
+  font-weight: 400;
+  color: #000;
+}
+
+.percentaje-box {
+  text-align: right;
+  font-weight: 500;
+}
+.percentaje-box > img {
+  width: 20px;
+}
+
+.footer-description {
+  padding: 10px;
+}
